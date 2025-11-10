@@ -17,8 +17,8 @@ const ProductDetail = () => {
   const product = getProductById(id || '');
   const { addItem } = useCart();
   const [quantity, setQuantity] = useState(1);
-  const [selectedSize, setSelectedSize] = useState('');
-  const [selectedColor, setSelectedColor] = useState('');
+  const [selectedSize, setSelectedSize] = useState(product?.sizes?.[0] || '');
+  const [selectedColor, setSelectedColor] = useState(product?.colors?.[0]?.name || '');
   const [selectedImage, setSelectedImage] = useState(0);
 
   if (!product) {
