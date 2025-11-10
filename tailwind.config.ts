@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -48,8 +52,9 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         luxury: {
-          DEFAULT: "hsl(var(--luxury))",
-          foreground: "hsl(var(--luxury-foreground))",
+          gold: "hsl(var(--luxury-gold))",
+          "gold-light": "hsl(var(--luxury-gold-light))",
+          "gold-dark": "hsl(var(--luxury-gold-dark))",
         },
         sale: {
           DEFAULT: "hsl(var(--sale))",
@@ -59,6 +64,11 @@ export default {
           DEFAULT: "hsl(var(--success))",
           foreground: "hsl(var(--success-foreground))",
         },
+      },
+      boxShadow: {
+        'luxury': 'var(--shadow-luxury)',
+        'gold': 'var(--shadow-gold)',
+        'hover': 'var(--shadow-hover)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -86,6 +96,9 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fadeIn 0.6s ease-out",
+        "slide-up": "slideUp 0.8s ease-out",
+        "scale-in": "scaleIn 0.5s ease-out",
       },
     },
   },
